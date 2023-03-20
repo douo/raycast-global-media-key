@@ -1,6 +1,7 @@
 import {
   closeMainWindow,
   environment,
+  showHUD,
 } from "@raycast/api";
 import { spawnSync } from "child_process";
 import fs from "fs";
@@ -20,6 +21,7 @@ export default async function send(type: string) {
     detached: true,
     stdio: 'ignore',
   });
+  showHUD(`send Key: ${type}`)
   console.log(status)
   console.log(output)
   console.log(error)
