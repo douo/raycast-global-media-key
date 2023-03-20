@@ -15,8 +15,11 @@ export default async function send(type: string) {
   } catch {
     await fs.promises.chmod(binary, 0o775);
   }
-  //const { status, output, stdout, stderr, error } = spawnSync(binary, [type]);
-  const { status, output, stdout, stderr, error } = spawnSync("/usr/bin/swift", [`${environment.assetsPath}/main.swift`, type]);
+  console.log(binary)
+  const { status, output, stdout, stderr, error } = spawnSync(binary, [type], {
+    detached: true,
+    stdio: 'ignore',
+  });
   console.log(status)
   console.log(output)
   console.log(error)
