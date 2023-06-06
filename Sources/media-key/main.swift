@@ -42,7 +42,7 @@ func HIDPostAuxKey(key: Int32) {
     }
     doKey(down: true)
     // https://stackoverflow.com/a/75084671
-    usleep(useconds_t(500 * 1_000)) //will sleep for 1 millisecond (.001 seconds
+    usleep(useconds_t(1 * 1_000)) //will sleep for 1 millisecond (.001 seconds
     doKey(down: false)
 }
 
