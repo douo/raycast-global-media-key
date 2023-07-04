@@ -1,3 +1,3 @@
-# Global Media Key
+# Media Key Emulate
 
-Global media key simulator
+Emulate keyboard media keys press, reassign hotkey for media keys.
