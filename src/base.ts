@@ -15,7 +15,7 @@ export default async function send(type: string) {
   _exec(binary, type);
 }
 
-function _exec(binary, type) {
+function _exec(binary: string, type: string) {
   // const { status, output, stdout, stderr, error } = spawnSync(binary, [type], {
   //   detached: true,
   //   stdio: 'ignore',
